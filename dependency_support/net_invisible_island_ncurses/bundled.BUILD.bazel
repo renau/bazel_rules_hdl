@@ -214,7 +214,9 @@ cc_binary(
         "ncurses/curses.priv.h",
         "ncurses/tinfo/make_hash.c",
     ],
-    deps = [":ncurses_headers"],
+    deps = [":ncurses_headers",
+            "@net_zlib//:zlib",
+    ],
     copts = NCURSES_COPTS,
 )
 
